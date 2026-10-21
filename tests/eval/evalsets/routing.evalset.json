@@ -1,0 +1,425 @@
+{
+  "eval_set_id": "studio_routing",
+  "name": "Studio routing",
+  "description": "Does the creative director pick the right tool for free text and for A2UI actions? Assets are not pre-seeded, so tools that need one may return an error; only the choice of tool is scored.",
+  "eval_cases": [
+    {
+      "eval_id": "vague_request_asks_one_question",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "make me an image"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "new_asset_creates_image",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "A flat-lay of three white sneakers on wet concrete, for an Instagram post"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "tone_words_use_filters",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "make it warmer and a bit brighter"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "content_change_uses_edit",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "replace the background with a sunlit kitchen counter"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ui_adjust_action",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "[ui-action] adjust context={\"warmth\": 40, \"exposure\": -10}"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ui_start_over_is_text_only",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "[ui-action] start_over context={}"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "go_back_to_version",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "go back to v2"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "undo_goes_to_previous",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "undo that, I liked it better before"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ui_revert_action",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "[ui-action] revert context={\"version\": \"3\"}"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "aspect_change_reframes",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "make it 16:9 for the website banner"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "named_model_is_passed",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "Create a luxury watch ad on black velvet, use Pro for this one"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "export_to_drive",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "save this to my google drive"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ui_reframe_action",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "[ui-action] reframe context={\"aspect\": \"9:16\"}"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ask_for_more_questions",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "ask me some more questions about this"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "questions_with_focus",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "what should I consider about the lighting?"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "chat_about_choices",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "why did you choose this lighting?"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "chat_about_models",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "what's the difference between lite and pro?"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ui_questions_action",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "[ui-action] questions context={}"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ui_answers_action",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "[ui-action] answers context={\"answer_background\": \"seamless white studio\", \"answer_mood\": \"\", \"note\": \"add steam\"}"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "upscale_to_4k",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "upscale this to 4k"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "upscale_2k_with_pro",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "upscale to 2K with pro"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    },
+    {
+      "eval_id": "ui_upscale_action",
+      "conversation": [
+        {
+          "user_content": {
+            "parts": [
+              {
+                "text": "[ui-action] upscale context={\"size\": \"2K\"}"
+              }
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "app",
+        "user_id": "eval_user",
+        "state": {}
+      }
+    }
+  ]
+}

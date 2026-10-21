@@ -1,0 +1,15 @@
+name: "agent-ix"
+acli_version: "0.2.0"
+agent_directory: "app"
+region: "us-central1"
+base_template: "adk_a2a"
+generated_at: "2026-09-30T11:13:49.172280+00:00"
+language: "python"
+create_params:
+  deployment_target: "agent_runtime"
+  session_type: "in_memory"
+  cicd_runner: "skip"
+  include_data_ingestion: false
+  is_a2a: true
+  datastore: "none"
+  agent_guidance_filename: "CLAUDE.md"
