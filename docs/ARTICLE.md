@@ -167,6 +167,9 @@ checks *that user's* permissions on the agent and the audit logs show who made e
 call. Access is granted and revoked per person in IAM. Nothing long-lived is shared:
 GE holds short-lived user tokens.
 
+![Gemini Enterprise asking the user to authorize Agent-I:X](img/ge-authorize.png)
+*The first time someone uses the agent, GE asks them to authorize it. After that, every call carries their own token.*
+
 **The user's token doesn't reach your code on Agent Runtime.** With the authorization
 attached, GE does send the user's token. Agent Runtime then replaces the
 `Authorization` header with its own Google-signed ID token (audience: the engine's
