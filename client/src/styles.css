@@ -1,0 +1,27 @@
+/* Material-flavoured styling for the local studio. Components render in light DOM. */
+:root {
+  --primary: #0b57d0;
+  --on-primary: #fff;
+  --surface: #fff;
+  --surface-dim: #f0f4f9;
+  --outline: #c4c7c5;
+  --text: #1f1f1f;
+  --muted: #5e5e5e;
+  font-family: "Google Sans", Roboto, system-ui, sans-serif;
+  color: var(--text);
+  background: var(--surface-dim);
+}
+body { margin: 0; }
+agent-ix-app { display: flex; flex-direction: column; min-height: 100vh; max-width: 760px; margin: 0 auto; }
+agent-ix-app header { padding: 16px; display: flex; gap: 12px; align-items: baseline; }
+agent-ix-app header span { color: var(--muted); font-size: 13px; }
+agent-ix-app main { flex: 1; padding: 0 16px 96px; display: flex; flex-direction: column; gap: 12px; }
+.hint { color: var(--muted); }
+.turn { max-width: 100%; }
+.turn p { margin: 4px 0; line-height: 1.5; }
+.turn.user { align-self: flex-end; background: var(--primary); color: var(--on-primary); padding: 8px 14px; border-radius: 18px; }
+.turn.agent.busy { color: var(--muted); font-style: italic; }
+.turn.error { color: #b3261e; }
+agent-ix-app form { position: fixed; bottom: 0; left: 0; right: 0; display: flex; gap: 8px; justify-content: center; padding: 16px; background: linear-gradient(transparent, var(--surface-dim) 30%); }
+agent-ix-app form input { width: min(640px, 70vw); padding: 12px 16px; border-radius: 24px; border: 1px solid var(--outline); font: inherit; }
+agent-ix-app form button { padding: 0 20px; border-radius: 24px; border: 0; background: var(--primary); color: var(--on-primary); font: inherit; cursor: pointer; }

@@ -1,0 +1,73 @@
+{
+  "criteria": {
+    "rubric_based_tool_use_quality_v1": {
+      "threshold": 0.8,
+      "judgeModelOptions": {
+        "judgeModel": "gemini-3.8-flash",
+        "numSamples": 1
+      },
+      "rubrics": [
+        {
+          "rubricId": "vague",
+          "rubricContent": {
+            "textProperty": "If the request is too vague to picture (e.g. 'make me an image'), the agent calls no tool and asks one short question."
+          }
+        },
+        {
+          "rubricId": "create",
+          "rubricContent": {
+            "textProperty": "A request for a new asset calls create_image with a prompt richer than the user's words. model= is passed only when the user names a model ('pro', 'nb2', 'lite'); otherwise it is left empty."
+          }
+        },
+        {
+          "rubricId": "filters",
+          "rubricContent": {
+            "textProperty": "Tone-only requests (warmer, brighter, contrast, grain) call adjust_image, not refine_image. Aspect ratio or format changes call reframe_image, never adjust_image."
+          }
+        },
+        {
+          "rubricId": "edit",
+          "rubricContent": {
+            "textProperty": "Content changes (objects, background, style, text) call refine_image."
+          }
+        },
+        {
+          "rubricId": "actions",
+          "rubricContent": {
+            "textProperty": "Messages starting with [ui-action] map directly without confirmation: adjust -> adjust_image with the context values, reframe -> reframe_image with context.aspect, revert -> revert_to_version with context.version, upscale -> upscale_image with context.size, questions -> ask_guiding_questions, answers -> one refine_image call whose instruction combines the non-empty answer_* values and the note, start_over -> no tool call."
+          }
+        },
+        {
+          "rubricId": "versions",
+          "rubricContent": {
+            "textProperty": "Requests to return to an earlier version call revert_to_version: 'go back to v2' with version=2, 'undo' or 'previous version' with version=0. They never regenerate or edit the image."
+          }
+        },
+        {
+          "rubricId": "gauges",
+          "rubricContent": {
+            "textProperty": "Requests about which filter sliders are shown call change_gauges (show/hide, only=True for 'only these', reset=True to go back) and do not call adjust_image or render a new image."
+          }
+        },
+        {
+          "rubricId": "download",
+          "rubricContent": {
+            "textProperty": "Requests to save, download or export (Google Drive included) call no tool and get one sentence pointing to the Download button on the studio card."
+          }
+        },
+        {
+          "rubricId": "intent",
+          "rubricContent": {
+            "textProperty": "The agent only renders when the user asks for a new or changed image. Requests for help deciding ('ask me more questions', 'what should I consider about the lighting?') call ask_guiding_questions (with focus when the user names an area) and no image tool. Conversational questions about the agent's choices or the models call no tool at all and are answered in text."
+          }
+        },
+        {
+          "rubricId": "upscale",
+          "rubricContent": {
+            "textProperty": "Upscale requests call upscale_image. size is '4K' by default and '2K' only when the user asks for 2K; model= is passed only when the user names a model (e.g. 'pro'). The agent never claims 2K is the maximum."
+          }
+        }
+      ]
+    }
+  }
+}
