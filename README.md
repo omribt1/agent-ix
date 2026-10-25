@@ -92,6 +92,9 @@ gcloud auth application-default login \
 
 ## Test
 
+Pull requests also get an automated security review from PR-noia
+(`.github/workflows/pr-review.yml`); comment `/review` on a PR to re-run it.
+
 ```bash
 make test    # unit + integration
 make eval    # routing evals (LLM-as-judge rubrics in tests/eval/eval_config.json)
