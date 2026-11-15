@@ -1,0 +1,39 @@
+/* GE composite catalog. Adopted into each <a2ui-surface> shadow root by material-catalog.ts. */
+ge-card { display: flex; flex-direction: column; background: var(--surface); border-radius: 16px; padding: 16px; margin-top: 8px; box-shadow: 0 1px 3px #0003; }
+ge-card[data-appearance="outlined"] { box-shadow: none; border: 1px solid var(--outline); }
+ge-canvas { display: flex; flex-direction: column; background: var(--surface); border-radius: 16px; padding: 16px; border-left: 4px solid var(--primary); }
+ge-row { display: flex; flex-direction: row; align-items: center; gap: 8px; }
+ge-column { display: flex; flex-direction: column; }
+ge-text .m-text { display: block; }
+ge-text .h5 { font-size: 20px; font-weight: 500; }
+ge-text .subtitle1, ge-text .subtitle2 { font-size: 14px; font-weight: 500; margin-top: 4px; }
+ge-text .caption { font-size: 12px; color: var(--muted); }
+ge-text .body, ge-text .body1, ge-text .body2 { font-size: 14px; line-height: 1.5; }
+ge-divider hr { border: 0; border-top: 1px solid var(--outline); margin: 4px 0; }
+ge-image img, ge-video video { display: block; max-height: 520px; background: var(--surface-dim); }
+ge-video video { width: 100%; border-radius: 12px; }
+ge-image img.rounded { border-radius: 12px; }
+ge-tabs .m-tab-bar { display: flex; gap: 4px; margin-bottom: 8px; }
+ge-tabs .m-tab-bar button, ge-chips button, ge-button-toggle button {
+  font: inherit; font-size: 13px; padding: 6px 14px; cursor: pointer;
+  border: 1px solid var(--outline); background: var(--surface); color: var(--text);
+}
+ge-tabs .m-tab-bar button { border: 0; border-bottom: 2px solid transparent; }
+ge-tabs .m-tab-bar button[aria-selected="true"] { border-bottom-color: var(--primary); color: var(--primary); }
+.m-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+ge-chips button { border-radius: 8px; }
+ge-chips button[aria-selected="true"] { background: #d3e3fd; border-color: #d3e3fd; }
+.m-toggle { display: inline-flex; }
+ge-button-toggle button { margin-left: -1px; }
+ge-button-toggle button:first-child { border-radius: 18px 0 0 18px; }
+ge-button-toggle button:last-child { border-radius: 0 18px 18px 0; }
+ge-button-toggle button[aria-pressed="true"] { background: #d3e3fd; }
+ge-slider { display: flex; align-items: center; gap: 8px; }
+ge-slider input { flex: 1; accent-color: var(--primary); }
+ge-slider output { width: 3ch; text-align: right; font-size: 12px; color: var(--muted); }
+.m-button { display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 14px; padding: 8px 16px; border-radius: 20px; cursor: pointer; border: 1px solid var(--outline); background: var(--surface); color: var(--primary); }
+.m-button.flat, .m-button.raised { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.m-button .material-symbols-outlined { font-size: 18px; }
+.m-input { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.m-input input { font: inherit; font-size: 14px; padding: 10px 12px; border: 1px solid var(--outline); border-radius: 8px; color: var(--text); }
+.material-symbols-outlined { font-family: "Material Symbols Outlined"; font-weight: normal; font-style: normal; line-height: 1; letter-spacing: normal; text-transform: none; white-space: nowrap; direction: ltr; -webkit-font-smoothing: antialiased; }
